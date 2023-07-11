@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: url("bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 15px;
+    padding: 15px 200px;
+    background-color: #f4c430;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filler {
+    min-height: 70px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.nav ion-icon {
+    font-size: 30px;
+    min-width: 30px;
+    /* padding-right: 15px; */
+}
+
+.nav .logo {
+    font-size: 30px;
+    font-weight: 500;
+    float: left;
+}
+
+.container .overview-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+}
+
+.container .overview-boxes a {
+    background: linear-gradient(135deg, #f3d680, #f4c430);
+    color: #333;
+    margin: 2vmax;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 25vw;
+    height: 25vw;
+    min-width: 350px;
+    min-height: 350px;
+}
+
+.container .overview-boxes a:after {
+    content: "";
+    display: block;
+}
+
+.box {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .overview-boxes a .top {
+    font-weight: 500;
+}
+
+.container .overview-boxes a .middle {
+    color: #fff;
+    font-size: 250%;
+    font-weight: 600;
+    /* margin-top: 6px; */
+}
+
+.container .overview-boxes a .bottom {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.container .overview-boxes a ion-icon {
+    display: block;
+    width: 100%;
+    font-size: 280%;
+    color: #fff;
+    align-self: center;
+    margin-top: 60%;
+    padding-top: 0;
+}
+
+@media (max-width: 1920) and (max-width: 2560px) {
+    .nav {
+        padding: 30px 100px;
+    }
+
+    .nav ion-icon, .nav .logo {
+        font-size: 90px;
+    }
+
+    .container .overview-boxes {
+        padding-top: 75px;
+    }
+
+    .container .overview-boxes a {
+        border-radius: 25px;
+        padding: 25px;
+    }
+
+    .container .overview-boxes a .top {
+        font-size: 37px;
+    }
+
+    .container .overview-boxes a .middle {
+        font-size: 58px;
+    }
+
+    .container .overview-boxes a .bottom {
+        font-size: 41px;
+    }
+
+    .container .overview-boxes a ion-icon {
+        font-size: 65px;
+    }
+}
+
+/*@media screen and (max-width: 1980px) {
+    .nav {
+        padding: 28px 100px;
+    }
+
+    .nav ion-icon, .nav .logo {
+        font-size: 55px;
+    }
+
+    .container .overview-boxes {
+        padding-top: 65px;
+    }
+
+    .container .overview-boxes a {
+        padding: 15px;
+    }
+
+    .container .overview-boxes a .top {
+        font-size: 28px;
+    }
+
+    .container .overview-boxes a .middle {
+        font-size: 54px;
+    }
+
+    .container .overview-boxes a .bottom {
+        font-size: 34px;
+    }
+
+    .container .overview-boxes a ion-icon {
+        font-size: 60px;
+    }
+}*/
+
+@media screen and (max-width: 1440px) {
+    .nav {
+        padding: 25px 100px;
+    }
+
+    .nav ion-icon, .nav .logo {
+        font-size: 37px;
+    }
+
+    .container .overview-boxes {
+        padding-top: 45px;
+    }
+
+    .container .overview-boxes a {
+        padding: 12px;
+    }
+
+    .container .overview-boxes a .top {
+        font-size: 22px;
+    }
+
+    .container .overview-boxes a .middle {
+        font-size: 44px;
+    }
+
+    .container .overview-boxes a .bottom {
+        font-size: 29px;
+    }
+
+    .container .overview-boxes a ion-icon {
+        font-size: 55px;
+        margin-top: 50%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .nav {
+        padding: 25px 100px;
+    }
+
+    .nav ion-icon, .nav .logo {
+        font-size: 37px;
+    }
+
+    .container .overview-boxes {
+        padding-top: 45px;
+    }
+
+    .container .overview-boxes a {
+        padding: 12px;
+    }
+
+    .container .overview-boxes a .top {
+        font-size: 22px;
+    }
+
+    .container .overview-boxes a .middle {
+        font-size: 44px;
+    }
+
+    .container .overview-boxes a .bottom {
+        font-size: 29px;
+    }
+
+    .container .overview-boxes a ion-icon {
+        font-size: 55px;
+        margin-top: 45%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .nav {
+        padding: 20px 100px;
+    }
+
+    .nav ion-icon, .nav .logo {
+        font-size: 30px;
+    }
+
+    .container .overview-boxes {
+        padding-top: 30px;
+    }
+
+    .container .overview-boxes a {
+        padding: 10px;
+    }
+
+    .container .overview-boxes a .top {
+        font-size: 19px;
+    }
+
+    .container .overview-boxes a .middle {
+        font-size: 38px;
+    }
+
+    .container .overview-boxes a .bottom {
+        font-size: 26px;
+    }
+
+    .container .overview-boxes a ion-icon {
+        font-size: 50px;
+        margin-top: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        padding: 15px 100px;
+    }
+
+    .nav ion-icon, .nav .logo {
+        font-size: 20px;
+    }
+
+    .container .overview-boxes {
+        padding: 0 3px;
+        padding-top: 10px;
+    }
+
+    .container .overview-boxes a {
+        padding: 10px;
+    }
+
+    .container .overview-boxes a .top {
+        font-size: 15px;
+    }
+
+    .container .overview-boxes a .middle {
+        font-size: 32px;
+    }
+
+    .container .overview-boxes a .bottom {
+        font-size: 21px;
+    }
+
+    .container .overview-boxes a ion-icon {
+        font-size: 43px;
+        margin-top: 55%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .nav {
+        padding: 15px 100px;
+    }
+
+    .nav ion-icon, .nav .logo {
+        font-size: 18px;
+    }
+
+    .container .overview-boxes {
+        padding: 0 3px;
+        padding-top: 10px;
+    }
+
+    .container .overview-boxes a {
+        padding: 9px;
+    }
+
+    .container .overview-boxes a .top {
+        font-size: 13px;
+    }
+
+    .container .overview-boxes a .middle {
+        font-size: 30px;
+    }
+
+    .container .overview-boxes a .bottom {
+        font-size: 19px;
+    }
+
+    .container .overview-boxes a ion-icon {
+        font-size: 41px;
+        margin-top: 60%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .nav {
+        padding: 10px 100px;
+    }
+
+    .filler {
+        min-height: 45px;
+    }
+
+    .nav ion-icon, .nav .logo {
+        font-size: 18px;
+    }
+
+    .container .overview-boxes {
+        padding: 0 3px;
+        padding-top: 0;
+    }
+
+    .container .overview-boxes a {
+        padding: 10px;
+    }
+
+    .container .overview-boxes a .top {
+        font-size: 13px;
+    }
+
+    .container .overview-boxes a .middle {
+        font-size: 30px;
+    }
+
+    .container .overview-boxes a .bottom {
+        font-size: 19px;
+    }
+
+    .container .overview-boxes a ion-icon {
+        font-size: 41px;
+        margin-top: 60%;
+    }
+}

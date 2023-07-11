@@ -1,0 +1,119 @@
+# CS 2607 Course Project
+
+A culminating project that applies the course's lessons of database management.
+
+## Major Contributions
+
+Designed the database from schema to MySQL. 
+
+Programmed a majority of the PHP back-end including but not limited to:
+1. Session handling
+1. Request handling
+1. Database integration for inserting, updating, and deleting records
+
+## Setup
+
+Host a server using the XAMPP control panel at port 3306.
+
+Use the root local instance of the MySQL workbench
+
+Run the MySQL code below to setup the database and create initial values to work with:
+
+```sql
+CREATE DATABASE TigerFoods;
+USE TigerFoods;
+CREATE TABLE LOCATION(
+  LOC_ID INT NOT NULL AUTO_INCREMENT,
+  LOC_CITY VARCHAR(15),
+  LOC_STREET VARCHAR(30),
+  LOC_BNUM VARCHAR(10),
+  PRIMARY KEY(LOC_ID)
+);
+
+CREATE TABLE RIDER(
+  RIDER_ID INT NOT NULL AUTO_INCREMENT,
+  RIDER_FNAME VARCHAR(50),
+  RIDER_LNAME VARCHAR(50),
+  RIDER_CONTACT_NUMBER INT,
+  PRIMARY KEY(RIDER_ID)
+);
+
+CREATE TABLE RESTAURANT(
+  RES_ID INT NOT NULL AUTO_INCREMENT,
+  RES_NAME VARCHAR(50),
+  LOC_NUMBER INT NOT NULL REFERENCES LOCATION(LOC_ID),
+  PRIMARY KEY(RES_ID)
+);
+
+CREATE TABLE ITEM(
+  ITEM_CODE INT NOT NULL AUTO_INCREMENT,
+  ITEM_NAME VARCHAR(30),
+  ITEM_PRICE INT,
+  ITEM_RES INT NOT NULL REFERENCES RESTAURANT(RES_ID),
+  PRIMARY KEY(ITEM_CODE)
+);
+
+CREATE TABLE CUSTOMER(
+  CUS_CODE INT NOT NULL AUTO_INCREMENT,
+  CUS_FNAME VARCHAR(20),
+  CUS_LNAME VARCHAR(20),
+  CUS_CONTACT_NUMBER INT,
+  LOC_NUMBER INT NOT NULL REFERENCES LOCATION(LOC_ID),
+  PRIMARY KEY(CUS_CODE)
+);
+
+CREATE TABLE ORD(
+  ORDER_CODE INT NOT NULL AUTO_INCREMENT,
+  ORDER_TIME TIMESTAMP,
+  PAY_TYPE VARCHAR(15) NOT NULL,
+  PAY_AMOUNT INT NOT NULL,
+  RIDER_ID INT REFERENCES RIDER(RIDER_ID),
+  CUS_CODE INT REFERENCES CUSTOMER(CUS_CODE),
+  RES_ID INT REFERENCES RESTAURANT(RES_ID),
+  PRIMARY KEY(ORDER_CODE)
+);
+
+CREATE TABLE TICKET(
+	ORDER_CODE INT NOT NULL REFERENCES ORD(ORDER_CODE),
+    ITEM_CODE INT NOT NULL REFERENCES ITEM(ITEM_CODE),
+    TICKET_QUAN INT NOT NULL,
+    PRIMARY KEY(ORDER_CODE, ITEM_CODE)
+);
+
+INSERT INTO LOCATION (LOC_CITY, LOC_STREET, LOC_BNUM) VALUES
+("San Juan", "Kalentong", "117"),
+("San Juan", "F. Manalo", "138"),
+("Quezon", "Balete Drive", "90"),
+("Paranaque", "Maywood", "45b"),
+("Taguig", "Bonifacio High Street", "748b3"),
+("Taguig", "Bonifacio High Street", "c1"),
+("Taguig", "Fort Bonifacio", "11");
+
+INSERT INTO RIDER (RIDER_FNAME, RIDER_LNAME, RIDER_CONTACT_NUMBER) VALUES
+("Jin", "Kazama", 491273),
+("Heihachi", "Mishima", 140697),
+("Lars", "Alexanderrson", 903804);
+
+INSERT INTO CUSTOMER (CUS_FNAME, CUS_LNAME, CUS_CONTACT_NUMBER, LOC_NUMBER) VALUES
+("Lena", "Oxton", 731144, (SELECT LOC_ID FROM LOCATION WHERE LOC_CITY = "San Juan" AND LOC_STREET = "Kalentong" AND LOC_BNUM = "117")),
+("Lucio", "dos Santos", 591328, (SELECT LOC_ID FROM LOCATION WHERE LOC_CITY = "Quezon" AND LOC_STREET = "Balete Drive" AND LOC_BNUM = "90")),
+("Akande", "Ogundimu", 740959, (SELECT LOC_ID FROM LOCATION WHERE LOC_CITY = "Paranaque" AND LOC_STREET = "Maywood" AND LOC_BNUM = "45b"));
+
+INSERT INTO RESTAURANT (RES_NAME, LOC_NUMBER) VALUES
+("Sunnies Cafe", (SELECT LOC_ID FROM LOCATION WHERE LOC_CITY = "Taguig" AND LOC_STREET = "Bonifacio High Street" AND LOC_BNUM = "748b3")),
+("Hanamaruken Ramen", (SELECT LOC_ID FROM LOCATION WHERE LOC_CITY = "Taguig" AND LOC_STREET = "Fort Bonifacio" AND LOC_BNUM = "11")),
+("Din Tai Fung", (SELECT LOC_ID FROM LOCATION WHERE LOC_CITY = "Taguig" AND LOC_STREET = "Bonifacio High Street" AND LOC_BNUM = "c1"));
+
+INSERT INTO ITEM (ITEM_NAME, ITEM_PRICE, ITEM_RES) VALUES
+("Braised Pork Bowl", 285, (SELECT RES_ID FROM RESTAURANT WHERE RES_NAME = "Sunnies Cafe")),
+("Beef Kimchi Fried Rice Bowl", 290, (SELECT RES_ID FROM RESTAURANT WHERE RES_NAME = "Sunnies Cafe")),
+("Honey Garlic Chicken Bowl", 245, (SELECT RES_ID FROM RESTAURANT WHERE RES_NAME = "Sunnies Cafe")),
+
+("Salary Man Ramen", 300, (SELECT RES_ID FROM RESTAURANT WHERE RES_NAME = "Hanamaruken Ramen")),
+("Spicy Tobanjan Ramen", 320, (SELECT RES_ID FROM RESTAURANT WHERE RES_NAME = "Hanamaruken Ramen")),
+("Potbelly Ramen", 410, (SELECT RES_ID FROM RESTAURANT WHERE RES_NAME = "Hanamaruken Ramen")),
+
+("Fried Pork Chop", 190, (SELECT RES_ID FROM RESTAURANT WHERE RES_NAME = "Din Tai Fung")),
+("Salt And Pepper Squid", 245, (SELECT RES_ID FROM RESTAURANT WHERE RES_NAME = "Din Tai Fung")),
+("Salted Egg Yolk Prawns", 375, (SELECT RES_ID FROM RESTAURANT WHERE RES_NAME = "Din Tai Fung"));
+```
