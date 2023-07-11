@@ -8,5 +8,5 @@ Projects will move in and out of this repository depending on their status and i
 1. Pseudo-Neural Network Model
 1. WiKatulong
 1. Information Systems Course Project
-1. Enterprise Front-end Machine Project 4
-1. Enterprise Back-end Final Academic Project
+1. Enterprise Front-end (CS 2608) Machine Project 4
+1. Enterprise Back-end (CS 2609) Final Academic Project
