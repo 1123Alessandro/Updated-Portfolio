@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orelega+One&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  width: auto;
+  background-color: #7a918d;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 550px;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.bi {
+  font-size: 5em;
+  margin-bottom: 25px;
+  color: #c5edac;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+p {
+  width: 75%;
+  font-size: 0.8em;
+}
+
+.button {
+  width: 200px;
+  margin: 60px 10px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Poppins", serif;
+}
+
+.button:first-of-type {
+  background-color: #c5edac;
+}
+
+.button:hover {
+  scale: 1.05;
+  color: var(--color-primary);
+  transition: all 0.5s ease;
+}
+
+.button:active {
+  scale: 0.95;
+}

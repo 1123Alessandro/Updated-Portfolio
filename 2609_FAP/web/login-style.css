@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  /* Text Variables */
+  --font-heading: "Crete Round", sans-serif;
+  --font-caption: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  max-width: 550px;
+  height: auto;
+  margin-left: 25px;
+
+  display: block;
+}
+
+h1 {
+  font-family: "Crete Round", serif;
+  font-style: italic;
+  color: #99c2a2;
+  text-align: left;
+}
+
+h2,
+p {
+  font-family: "Poppins", serif;
+  text-align: left;
+}
+
+h2 {
+  color: black;
+  text-align: left;
+}
+
+p {
+  color: #7a918d;
+}
+
+.left {
+  height: 100vh;
+  background-color: #f9f9f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width: 45%;
+  padding-left: 100px;
+}
+
+.right {
+  height: 100vh;
+  background-color: #fbfbfb;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  text-align: left;
+}
+
+.login-form {
+  width: 450px;
+}
+
+.form-item label:not(.checkboxLabel) {
+  display: inline-block;
+  font-family: "Poppins", serif;
+}
+
+.form-item:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+input[type="text"],
+input[type="password"] {
+  border-style: solid;
+  border: none;
+  background-color: #f4f4f4;
+  outline: none;
+  border-radius: 15px;
+  height: 55px;
+  padding: 0 3rem;
+  width: 100%;
+  transition: background 0.5s;
+  font-size: 14px;
+}
+
+.form-item:nth-child(-n + 2) {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  top: 2;
+  font-size: 25px;
+  padding-left: 9px;
+  color: #99c2a2;
+}
+
+.login-header {
+  margin-bottom: 50px;
+}
+
+.login-form-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.login-form-footer a {
+  border: 1px solid #f4f4f4;
+  border-radius: 15px;
+  padding: 0.6rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  margin: 10px;
+  color: black;
+  text-decoration: none;
+  font-family: "Poppins", serif;
+  text-align: center;
+}
+
+#checkboxLabel {
+  margin-top: 20px;
+}
+
+button {
+  width: 400px;
+  margin: 10px 25px;
+  padding: 10px 20px;
+  background-color: #99c2a2;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Poppins", serif;
+  text-align: center;
+}
+
+button:last-of-type {
+  background-color: transparent;
+  border: 2px solid #9e9e9e;
+  color: black;
+}
+
+button:hover {
+  scale: 1.05;
+  color: var(--color-primary);
+  transition: all 0.5s ease;
+}
+
+#rememberMeCheckbox {
+  accent-color: #99c2a2;
+}
+
+@media (max-width: 1050px) {
+  .left {
+    display: none;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media (max-width: 540px) {
+  .login-form {
+    width: 360px;
+  }
+  button {
+    width: 300px;
+  }
+}
+@media (max-width: 390px) {
+  .login-form {
+    width: 250px;
+  }
+  button {
+    width: 170px;
+  }
+}
