@@ -1,0 +1,128 @@
+<html>
+    <!--
+        #2d2d2a - black
+        #ffc145 - yellow
+        #fffffb - white
+        #ff6b6c - red
+        #495867 - blue
+    -->
+    <head>
+        <title>WiKATULONG | Iyong Katulong sa Mabisang Pagsulat</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<style>
+			.tagline{
+				position: absolute;
+				font-family: "Raleway Medium";
+				font-size: 40px;
+				top: 20%;
+				left: 15%;
+				right: 15%;
+				text-align: center;
+				color: white;
+			}
+			
+			.arawang-baybayin-card{
+				top: 35%;
+			}
+		</style>
+    </head>
+        <body>
+        <div class="navbar">
+            <a href="home_page.html" class="wikatulong-logo">WiKATULONG<img src="LOGO.svg" alt="hi"/></a>
+            <div class="navbar-right">
+                <a href="home_page.html">HOME</a>
+                <a href="kasaysayan.html">KASAYSAYAN</a>
+                <a href="" class="navbar-dropdown">GABAY SA BARIRALA</a>
+
+                <div class="navbar-dropdown-content">
+                    <a href="pagbaybay.html">PAGBAYBAY</a>
+                    <a href="#">...</a>
+                    <a href="#">...</a>
+                </div>
+
+                <a href="panitikan.html">MGA PANITIKAN</a>            
+            </div>
+        </div>
+        
+        <div class="first-fold">
+			<h1 class="tagline">Iyong Katulong sa Mabisang Pagsulat</h1>
+            <div class="arawang-baybayin-card">
+                <h1 class="arawang-baybayin">ARAWAYBAYIN</h1>
+                <h2 class="word-sample">HIGUGMA</h2>
+                <h2 class="baybayin">higugm</h2>
+                <h2 class="definition">MAHAL</h2>
+            </div>
+            
+            <div class="arawang-baybayin-card">
+                <h1 class="arawang-baybayin">ARAWAYBAYIN</h1>
+                <h2 class="word-sample">DAYAW</h2>
+                <h2 class="baybayin">dyw</h2>
+                <h2 class="definition">papuri</h2>
+            </div>
+            
+            <div class="arawang-baybayin-card">
+                <h1 class="arawang-baybayin">ARAWAYBAYIN</h1>
+                <h2 class="word-sample">PALIHUG</h2>
+                <h2 class="baybayin">plihug</h2>
+                <h2 class="definition">PAKI-USAP</h2>
+            </div>
+            
+            <div class="arawang-baybayin-card">
+                <h1 class="arawang-baybayin">ARAWAYBAYIN</h1>
+                <h2 class="word-sample">BAGABAG</h2>
+                <h2 class="baybayin">bgbg</h2>
+                <h2 class="definition">ALALA, TARANTA</h2>
+            </div>
+            
+            <div class="arawang-baybayin-card">
+                <h1 class="arawang-baybayin">ARAWAYBAYIN</h1>
+                <h2 class="word-sample">DAMO</h2>
+                <h2 class="baybayin">dmo</h2>
+                <h2 class="definition">MARAMI</h2>
+            </div>
+        </div>
+		
+		<div class="footer">
+			<p class="copyright-info">Ang mga impormasyon ay hango sa Manwal sa Masinop na Pagsulat ni Virgilio Almario</p>
+			<p class="copyright-info">&copy; 11 - St. Raymond 2019</p>
+			
+			<div class="social-media-links">
+				<a class="social-media-link" href="">Facebook</a>
+				<p class="slash"> / </p>
+				<a class="social-media-link" href="">Twitter</a>
+				<p class="slash"> / </p>
+				<a class="social-media-link" href="contact_us.html">E-mail Us</a>
+			</div>
+		</div>
+        
+        <script>
+            var slideIndex = 0;
+            carousel();
+            
+            function carousel(){
+                var i;
+                var x = document.getElementsByClassName("arawang-baybayin-card");
+                
+                for(i = 0; i < x.length; i++){
+                    x[i].style.display = "none";
+                    x[i].style.opacity = 0;
+                }
+                
+                slideIndex++;
+                
+                if(slideIndex > x.length){
+                    slideIndex = 1;
+                }
+                
+                x[slideIndex - 1].style.display = "block";
+                
+                var fadeIndex = 0;
+                while(fadeIndex <= 1){
+                    x[slideIndex - 1].style.opacity = fadeIndex;
+                    fadeIndex += .05
+                }
+                setTimeout(carousel, 5000)
+            }
+        </script>
+    </body>
+</html>

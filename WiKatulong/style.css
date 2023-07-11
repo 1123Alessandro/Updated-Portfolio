@@ -1,0 +1,205 @@
+body {
+    background-color: #fffffb;
+}
+
+.content{
+	margin: 0 15%;
+	
+}
+
+h3 {
+    background-color: #fffffb;
+    color: #2d2d2a;
+    font-family: 'Raleway medium';
+    padding: 10px;
+    width: 400px;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+h3:hover span {
+    display: none;
+}
+
+.navbar{
+    background-color: #2d2d2a;
+    display: inline-block;
+    width: 100%;
+	position: fixed;
+	z-index: 1;
+	margin: -23px 0;
+}
+
+.navbar-right{
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    right: -35%;
+    width: 50%;
+}
+
+.navbar a{
+    display: inline-block;
+    top: 25%;
+    left: 15%;
+    text-decoration: none;
+    position: relative;
+    color: #fffffb;
+    font-family: "Raleway Light";
+    font-size: 13px;
+    margin-right: 1.5%;
+    transition: .25s;
+    padding: 12px 12px;
+}
+
+.navbar a:hover{
+    top: 25%;
+    left: 15%;
+    text-decoration: none;
+    position: relative;
+    color: #ffc145;
+    text-shadow: 0px 0px 5px #ffc145;
+    transition: .25s;
+}
+
+.navbar-dropdown-content{
+    opacity: 0;
+    position: absolute;
+    color: #1a1a1a;
+    background-color: gray;
+    top: 39px;
+    z-index: -1;
+    left: 43%;
+    right: 33%;
+    
+    transition: .25s;
+}
+
+.navbar-dropdown-content a{
+    display: block;
+    left: 0;
+    text-align: center;
+    padding: 15px 0px;
+}
+
+.navbar-dropdown-content a:hover{
+    left: 0;
+}
+
+.navbar-dropdown:hover ~ .navbar-dropdown-content{
+    opacity: 1;
+    top: 39;
+    display: block;
+    z-index: 1;
+    
+    transition: .25s;
+}
+
+.navbar-dropdown-content:hover .navbar-dropdown{
+    color: #ffc145;
+    text-shadow: 0px 0px 5px #ffc145;
+    transition: .25s;
+}
+
+.navbar-dropdown-content:hover{ 
+    opacity: 1;
+    top: 39;
+    display: block;
+    z-index: 1;
+    
+    transition: .25s;
+}
+
+.wikatulong-logo img{
+    height: 30px;
+    position: absolute;
+    bottom: 3px;
+    left: -40px;
+}
+
+.wikatulong-logo{
+    font-family: "Raleway SemiBold";
+}
+
+p {
+    font-family: "Raleway SemiBold";
+    padding: 10px;
+    color: #2d2d2a;
+    line-height: 25px;
+}
+
+p:hover {
+    text-decoration: underline;
+}
+
+ul {
+    font-family: "Raleway medium";
+    background-color: #2d2d2a;
+    color: #fffffb;
+    padding: 20px 40px;
+    line-height: 30px;
+}
+
+th, td, table {
+    color: #fffffb;
+    font-family: "Raleway medium";
+    border: 1px;
+    line-height: 30px;
+    width: 1064px;
+    background-color: #2d2d2a;
+    font-size: 20px;
+    border: 1px solid #fffffb;
+    padding: 10px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.h3_1:hover:before {
+    content: "Kabanata 1";
+}
+.h3_2:hover:before {
+    content: "Kabanata 2";
+}
+.h3_3:hover:before {
+    content: "Kabanata 3";
+}
+
+.top {
+    text-align: center;
+    background-color: #3d3d38;
+    height: 30px;
+    font-size: 20px;
+    color: #fffffb;
+    font-family: "Raleway";
+    padding-top: 10px;
+}
+.top:hover span {
+    display: none;
+}
+.top:hover:before {
+    content: "|Balik sa Taas|";
+}
+
+a {
+    text-decoration: none;
+}
+
+.pluma {
+    background-image: url(pluma.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-color: #2a2a2d;
+    background-blend-mode: overlay;
+    height: 400px;
+}
+.pluma h1{
+    margin: 20px 15%;
+}
+
+.table a {
+    color: #fffffb;
+}
+th:hover {
+    background-color: #495867;
+}
