@@ -17,6 +17,8 @@ Dependencies:
 1. commons-codec-1.9.jar
 1. mysql-connector-j-8.0.32.jar
 
+Build and Run after resolving compatibility issues.
+
 Database Setup:
 ```sql
 CREATE DATABASE EWalletDB;
