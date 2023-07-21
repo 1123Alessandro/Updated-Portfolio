@@ -1,6 +1,6 @@
 # Revised Personal Portfolio
 
-Alessandro Andrei Araza's portfolio repository. This repository contains some of my notable contributions, projects, and other personal work.
+Alessandro Andrei Araza's portfolio repository. This repository contains some of my notable contributions, projects, and other personal work most of which done before integrating my workflow with github.
 
 ## Projects
 
